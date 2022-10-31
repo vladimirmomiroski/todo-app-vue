@@ -1,9 +1,10 @@
+<!-- eslint-disable vue/no-mutating-props -->
 
 <template>
   <div
     class="d-flex justify-content-between p-2 border-bottom"
   >
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center" :class="isCompleted ? 'line-through' : ''">
       <p class="m-0">{{ todo.title }}</p>
       <input @click="toggleTodo(todo, todo.isCompleted)" class="mx-2" type="checkbox" v-model="todo.isCompleted" />
     </div>
@@ -19,15 +20,11 @@
 </template>
 
 <script>
-import ModalComp from "../ModalComp.vue";
 export default {
   data(props) {
     return {
       isCompleted: props.todo.isCompleted,
     };
-  },
-  components: {
-    ModalComp,
   },
   props: {
     todo: Object,
@@ -47,4 +44,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+.line-through {
+  text-decoration: line-through;
+}
+
+</style>
