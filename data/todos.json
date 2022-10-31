@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1667154396252,
+      "title": "Gym",
+      "isCompleted": false
+    },
+    {
+      "id": 1667156109450,
+      "title": "Running 2",
+      "isCompleted": true
+    },
+    {
+      "id": 1667176999395,
+      "title": "something else",
+      "isCompleted": true
+    }
+  ]
+}
